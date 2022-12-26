@@ -12,7 +12,7 @@ def factoriztion(num):
 def main():
     f = open(source, 'r');
     for line in f.readlines():
-        div = factoriztion(int(line))
+        div = 1
         print("{:d}={:d}*{:d}".format(int(line), int(int(line)/div), div))
     f.close()
 main()
