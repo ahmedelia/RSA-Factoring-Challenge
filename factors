@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+import sys
+
+source = sys.argv[1]
+
+def factoriztion(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return i
+    return 1
+
+def main():
+    f = open(source, 'r');
+    for line in f.readlines():
+        div = factoriztion(int(line))
+        print("{:d}={:d}*{:d}".format(int(line), int(int(line)/div), div))
+    f.close()
+main()
